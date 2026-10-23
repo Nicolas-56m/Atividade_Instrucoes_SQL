@@ -151,4 +151,18 @@ ORDER BY status_venda DESC;
 
 ```SQL
 USE vendas_informatica;
+
+SELECT 
+    cliente.nome_cliente AS nome_cliente, 
+    cliente.email, 
+    produto.nome_produto AS nome_produto, 
+    produto.marca, 
+    produto.categoria, 
+    venda.forma_pagamento, 
+    venda.status_venda 
+FROM venda
+JOIN cliente ON venda.id_cliente = cliente.id_cliente 
+JOIN produto ON venda.id_produto = produto.id_produto 
+WHERE venda.status_venda IN ("Cancelada", "Concluída") 
+ORDER BY venda.preco_unitario_venda DESC;
 ```
