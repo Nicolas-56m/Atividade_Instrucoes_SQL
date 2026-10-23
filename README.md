@@ -145,7 +145,10 @@ SELECT produto.nome_produto, cliente.nome_cliente, venda.desconto_pagamento, sta
 FROM produto
 INNER JOIN venda
 ORDER BY status_venda DESC;
+```
 
-/* Instrução 16 */
+## Instrução 16
+
+```SQL
 USE vendas_informatica;
 ```
