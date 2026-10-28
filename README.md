@@ -1,4 +1,4 @@
-# Atividade_Instrucoes_READ_SQL
+# Atividades_DML_READ_SQL
 
 ## Instrução 1
 
