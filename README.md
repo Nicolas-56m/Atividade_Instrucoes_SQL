@@ -141,10 +141,15 @@ ORDER BY data_venda ASC;
 ```SQL
 USE vendas_informatica;
 
-SELECT produto.nome_produto, cliente.nome_cliente, venda.desconto_pagamento, venda.status_venda 
-FROM produto
-INNER JOIN venda
-ORDER BY status_venda DESC;
+SELECT 
+    produto.nome_produto, 
+    cliente.nome_cliente, 
+    venda.desconto_percentual, 
+    venda.forma_pagamento
+FROM venda
+INNER JOIN produto ON venda.id_produto = produto.id_produto
+INNER JOIN cliente ON venda.id_cliente = cliente.id_cliente
+ORDER BY venda.status_venda ASC;
 ```
 
 ## Instrução 16
