@@ -141,7 +141,7 @@ ORDER BY data_venda ASC;
 ```SQL
 USE vendas_informatica;
 
-SELECT produto.nome_produto, cliente.nome_cliente, venda.desconto_pagamento, status_venda 
+SELECT produto.nome_produto, cliente.nome_cliente, venda.desconto_pagamento, venda.status_venda 
 FROM produto
 INNER JOIN venda
 ORDER BY status_venda DESC;
